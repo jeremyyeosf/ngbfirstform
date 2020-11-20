@@ -1,0 +1,22 @@
+<p>demo-form-sku works!</p>
+
+<div>
+    <h2 class="ui header">Demo Form: Sku</h2>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="ui form">
+
+        <div class="field">
+            <label for="skuInput">SKU</label>
+            <input  type="text"
+                    id="skuInput"
+                    placeholder="SKU"
+                    name="sku" ngModel>
+                    <!-- When we use ngModel with no attribute value we are specifying: -->
+                    <!-- 1.a one-way data binding  -->
+                    <!-- 2.we want to create a FormControl on this form with the name sku  -->
+                    <!-- (because of the name attribute on the input tag) -->
+                    
+        </div>
+        <button type="submit">Submit</button>
+        
+    </form>
+</div>
